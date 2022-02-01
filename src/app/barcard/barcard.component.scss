@@ -1,0 +1,58 @@
+.barcard {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 2%;
+    height: 8vw;
+    background-color: rgba(242, 255, 0, 0.317);
+    min-width: 350px;
+    min-height: 73px;
+    display: flex;
+}
+
+.barcard .main_section {
+    min-width: 400px;
+}
+
+.title {
+    display: flex;
+    margin-bottom: 6px;
+    align-items: center;
+}
+
+.title .beer_icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    margin: 0;
+}
+
+.title .main_titile {
+    vertical-align: middle;
+    height: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.barcard .subtitle {
+    margin-bottom: 4px;
+}
+.barcard .area_stations {
+    display: flex;
+}
+
+.barcard .area_station {
+    margin-right: 8px;
+}
+
+.barcard .tap_value {
+    font-size: medium;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+    margin-right: 8px;
+}
+.barcard .food_value {
+    font-size: medium;
+    margin-top: 1.5vw;
+    margin-bottom: 1vw;
+    margin-right: 8px;
+}
