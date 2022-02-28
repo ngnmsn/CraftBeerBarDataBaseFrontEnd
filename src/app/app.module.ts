@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { ExplorerComponent } from './explorer/explorer.component';
 import { BarlistComponent } from './barlist/barlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BarcardComponent } from './barcard/barcard.component';
+
+import { StationsService } from './stations.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,12 @@ import { BarcardComponent } from './barcard/barcard.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    StationsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,9 @@
 <div class="explorer">
     <form>
         <div class="explorer_form">
-            <input #areaForm type="search" name="area" class="area_form" placeholder="最寄り駅" (input)="areaFilter(areaForm.value)" list="arealist"/>
-            <datalist id="arealist">
-                <option *ngFor="let area of areaList" value={{area}}></option>
+            <input #areaForm type="search" name="area" class="area_form" placeholder="最寄り駅" autocomplete="off" list="stationlist"/>
+            <datalist id="stationlist">
+                <option *ngFor="let station of stations" value={{station.stationName}}></option>
             </datalist>
         </div>
     </form>
