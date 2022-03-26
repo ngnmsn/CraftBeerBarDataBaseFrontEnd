@@ -3,9 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Station } from '../station';
 import { StationsService } from '../stations.service';
 
+import { Bar } from '../bar'
+import { BarlistService } from '../barlist.service';
+
 import { Logger } from '../logger';
 
-import { ResponseGetStations } from '../response-interface';
+import { ResponseGetStations, ResponseGetBarList } from '../response-interface';
 
 @Component({
   selector: 'app-explorer',
@@ -15,10 +18,14 @@ import { ResponseGetStations } from '../response-interface';
 export class ExplorerComponent implements OnInit {
 
   responseGetStations!: ResponseGetStations;
+  responseGetBarList!: ResponseGetBarList;
   stations: Station[] = [];
+  barList: Bar[] = [];
+  keyword: string = "";
 
   constructor(
-    private stationsService: StationsService
+    private stationsService: StationsService,
+    private barListService: BarlistService
   ) { }
 
   ngOnInit(): void {
@@ -35,8 +42,13 @@ export class ExplorerComponent implements OnInit {
     })
   }
 
-  areaFilter(area: string): void {
-
+  getBarList(): void {
+    this.barListService.getBarList(this.keyword).subscribe(res => {
+      this.responseGetBarList = res;
+      Logger.info(this.responseGetBarList);
+      this.barList = this.responseGetBarList.barlist;
+      Logger.info(this.barList)
+    })
   }
 
 }

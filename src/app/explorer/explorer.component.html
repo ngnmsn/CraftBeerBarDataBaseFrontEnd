@@ -1,10 +1,11 @@
 <div class="explorer">
-    <form>
+    <form (ngSubmit)="getBarList()">
         <div class="explorer_form">
-            <input #areaForm type="search" name="area" class="area_form" placeholder="最寄り駅" autocomplete="off" list="stationlist"/>
-            <datalist id="stationlist">
-                <option *ngFor="let station of stations" value={{station.stationName}}></option>
+            <input type="search" name="area" class="area_form" [(ngModel)]="keyword" placeholder="最寄り駅" autocomplete="off" list="stationlist"/>
+            <datalist id="stationlist" *ngIf="stations">
+                <option *ngFor="let station of stations" value={{station.stationName}}>
             </datalist>
+            <input type="submit" name="submit_button" class="submit_button">
         </div>
     </form>
 </div>
