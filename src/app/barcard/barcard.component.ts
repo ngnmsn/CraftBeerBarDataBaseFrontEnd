@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Bar } from '../bar';
+import { Logger } from '../logger';
 
 @Component({
   selector: 'app-barcard',
@@ -7,24 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarcardComponent implements OnInit {
 
-  constructor() { }
-  bar = {
-    id: "0001",
-    name: "クラフトマン横浜",
-    tap: 31,
-    Food: "Mex-Italian",
-    areas: [
-      {
-        stationName: "横浜駅",
-        walk_time: 5
-      },
-      {
-        stationName: "反町駅",
-        walk_time: 2
-      }
-    ]
+  _bar!: Bar;
+
+  @Input() set bar(bar: Bar) {
+    this._bar = bar;
+    Logger.info(this._bar);
   }
-  
+
+  constructor() { }  
 
   ngOnInit(): void {
   }

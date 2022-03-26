@@ -6,5 +6,5 @@ export interface ResponseGetStations {
 }
 
 export interface ResponseGetBarList {
-    barlist: Bar[];
+    barList: Bar[];
 }

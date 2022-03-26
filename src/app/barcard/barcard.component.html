@@ -1,13 +1,17 @@
 <mat-card class="barcard">
     <div class="main_section">
         <div class="title">
-            <mat-icon class="beer_icon">sports_bar</mat-icon><mat-card-title class="main_titile">{{bar.name}}</mat-card-title>
+            <mat-icon class="beer_icon">sports_bar</mat-icon><mat-card-title class="main_titile">{{_bar.barName}}</mat-card-title>
         </div>
         <div class="area_stations">
-            <div *ngFor="let area of bar.areas" class="area_station">
-                <label class="subtitle">{{area.stationName}} 徒歩{{area.walk_time}}分</label>
-            </div>
+            <label class="subtitle">{{ _bar.address }}</label>
         </div>
-        <label class="tap_value">Tap : 31</label><label class="food_value">Food : Mex-Italian</label>
+        <div class="area_stations">
+            <label class="subtitle">{{ _bar.phoneNumber }}</label>
+        </div>
+        <div class="area_stations">
+            <a class="subtitle" [href]="_bar.tabelogLink">食べログリンク</a>
+        </div>
+        <label class="tap_value">Tap : {{ _bar.numberOfTaps }}</label><label class="food_value">Food : Mex-Italian</label>
     </div>
  </mat-card>
