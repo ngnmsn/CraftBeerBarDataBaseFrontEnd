@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BarlistComponent } from '../barlist/barlist.component';
 
 import { Station } from '../station';
 import { StationsService } from '../stations.service';
@@ -46,8 +47,8 @@ export class ExplorerComponent implements OnInit {
     this.barListService.getBarList(this.keyword).subscribe(res => {
       this.responseGetBarList = res;
       Logger.info(this.responseGetBarList);
-      this.barList = this.responseGetBarList.barlist;
-      Logger.info(this.barList)
+      this.barList = this.responseGetBarList.barList;
+      Logger.info(this.barList);
     })
   }
 
