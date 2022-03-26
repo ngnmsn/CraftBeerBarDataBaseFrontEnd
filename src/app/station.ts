@@ -1,5 +1,5 @@
 export class Station {
-    staionId!: number;
+    stationId!: number;
     stationName!: string;
     lineName!: string;
 }
