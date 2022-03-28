@@ -4,14 +4,19 @@
             <mat-icon class="beer_icon">sports_bar</mat-icon><mat-card-title class="main_titile">{{_bar.barName}}</mat-card-title>
         </div>
         <div class="area_stations">
+            <label class="subtitle">{{ _bar.nearStationName }}</label>
+            <label class="subtitle">徒歩{{ _bar.onFootTime }}分</label>
             <label class="subtitle">{{ _bar.address }}</label>
         </div>
         <div class="area_stations">
             <label class="subtitle">{{ _bar.phoneNumber }}</label>
         </div>
         <div class="area_stations">
+            <a class="subtitle" [href]="_bar.officialLink">公式サイトリンク</a>
+        </div>
+        <div class="area_stations">
             <a class="subtitle" [href]="_bar.tabelogLink">食べログリンク</a>
         </div>
-        <label class="tap_value">Tap : {{ _bar.numberOfTaps }}</label><label class="food_value">Food : Mex-Italian</label>
+        <label class="tap_value">Tap : {{ _bar.numberOfTaps }}</label><label class="food_value">Food : {{ _bar.food }}</label><label class="food_value">Style : {{ _bar.style }}</label>
     </div>
  </mat-card>
