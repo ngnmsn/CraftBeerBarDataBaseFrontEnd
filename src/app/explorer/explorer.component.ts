@@ -23,6 +23,7 @@ export class ExplorerComponent implements OnInit {
   stations: Station[] = [];
   barList: Bar[] = [];
   keyword: string = "";
+  isEmpty: boolean = true;
 
   constructor(
     private stationsService: StationsService,
@@ -50,6 +51,14 @@ export class ExplorerComponent implements OnInit {
       this.barList = this.responseGetBarList.barList;
       Logger.info(this.barList);
     })
+  }
+
+  checkForm(): void {
+    if(this.keyword.length > 0) {
+      this.isEmpty = false;
+    } else {
+      this.isEmpty = true;
+    }
   }
 
 }
