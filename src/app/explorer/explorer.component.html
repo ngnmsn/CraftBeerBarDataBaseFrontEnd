@@ -2,10 +2,10 @@
     <form (ngSubmit)="getBarList()">
         <div class="explorer_form">
             <input type="search" name="area" class="area_form" [(ngModel)]="keyword" placeholder="最寄り駅" autocomplete="off" list="stationlist" (input)="checkForm()"/>
-            <datalist id="stationlist" *ngIf="stations">
-                <option *ngFor="let station of stations" value={{station.stationName}}>
+            <datalist id="stationlist">
+                <option *ngFor="let station of stations" value={{station.stationName}} [disabled]="isEmpty">
             </datalist>
-            <input type="submit" name="submit_button" class="submit_button" [disabled]="isEmpty">
+            <input type="image" src="../../assets/img/explorer/button_search.svg" name="submit_button" class="submit_button">
         </div>
     </form>
 </div>

@@ -1,22 +1,50 @@
 <mat-card class="barcard">
+    <div class="list_image">
+        <!-- <img class="list_image_tag"src="../../assets/img/upload/1/1_list_image.jpg" > -->
+        <img class="list_image_tag"src="http://localhost:80/image/1_list_image.jpg" >
+        <!-- <img class="list_image_tag"src="https://d3ms04u7nrwodm.cloudfront.net/1_list_image.jpg" > -->
+    </div>
     <div class="main_section">
         <div class="title">
-            <mat-icon class="beer_icon">sports_bar</mat-icon><mat-card-title class="main_titile">{{_bar.barName}}</mat-card-title>
+            <p>{{_bar.barName}}</p>
         </div>
-        <div class="area_stations">
-            <label class="subtitle">{{ _bar.nearStationName }}</label>
-            <label class="subtitle">徒歩{{ _bar.onFootTime }}分</label>
-            <label class="subtitle">{{ _bar.address }}</label>
+        <div class="under_section">
+            <div class="left_section">
+                <div class="location">
+                    <label><p>{{ _bar.nearStationName }}</p></label>
+                    <label><p>徒歩{{ _bar.onFootTime }}分</p></label>
+                </div>
+                <div class="number_of_tap">
+                    <div class="tap_label">
+                        <label><p>Tap</p></label>
+                    </div>
+                    <div class="tap_value">
+                        <label><p>{{ _bar.numberOfTaps }}</p></label>
+                    </div>
+                </div>
+            </div>
+            <div class="right_section">
+                <div class="address">
+                    <label><p>{{ _bar.address }}</p></label>
+                </div>
+                <div class="phone_number">
+                    <label><p>{{ _bar.phoneNumber }}</p></label>
+                </div>
+                <div class="food">
+                    <label><p>Food : {{ _bar.food }}</p></label>
+                </div>
+                <div class="style">
+                    <label><p>Style : {{ _bar.style }}</p></label>
+                </div>
+                <div class="link_section">
+                    <div class="official_link">
+                        <a [href]="_bar.officialLink"><p>公式サイトリンク</p></a>
+                    </div>
+                    <div class="tabelog_link">
+                        <a [href]="_bar.tabelogLink"><p>食べログリンク</p></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="area_stations">
-            <label class="subtitle">{{ _bar.phoneNumber }}</label>
-        </div>
-        <div class="area_stations">
-            <a class="subtitle" [href]="_bar.officialLink">公式サイトリンク</a>
-        </div>
-        <div class="area_stations">
-            <a class="subtitle" [href]="_bar.tabelogLink">食べログリンク</a>
-        </div>
-        <label class="tap_value">Tap : {{ _bar.numberOfTaps }}</label><label class="food_value">Food : {{ _bar.food }}</label><label class="food_value">Style : {{ _bar.style }}</label>
     </div>
  </mat-card>
