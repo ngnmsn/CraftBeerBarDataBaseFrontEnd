@@ -10,15 +10,22 @@ import { Logger } from '../logger';
 export class BarcardComponent implements OnInit {
 
   _bar!: Bar;
+  listImageUrlBuilded!: string;
+  private url = "http://localhost:80/image/";
 
   @Input() set bar(bar: Bar) {
     this._bar = bar;
+    this.buildListImageUrl(bar.listImageUrl);
     Logger.info(this._bar);
   }
 
   constructor() { }  
 
   ngOnInit(): void {
+  }
+
+  buildListImageUrl(listImageUrl: string) {
+    this.listImageUrlBuilded = this.url +listImageUrl
   }
 
 }
