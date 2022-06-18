@@ -1,5 +1,5 @@
-<div>
-    <ul class="barlist" *ngFor="let bar of barlist">
-        <li class="bar"><app-barcard></app-barcard></li>
+<div class="barlist_overall">
+    <ul class="barlist" *ngFor="let bar of _barlist">
+        <li class="bar"><app-barcard [bar]="bar"></app-barcard></li>
     </ul>
 </div>

@@ -1,13 +1,48 @@
 <mat-card class="barcard">
+    <div class="list_image">
+        <img class="list_image_tag" src="{{ listImageUrlBuilded }}" >
+    </div>
     <div class="main_section">
         <div class="title">
-            <mat-icon class="beer_icon">sports_bar</mat-icon><mat-card-title class="main_titile">{{bar.name}}</mat-card-title>
+            <p>{{_bar.barName}}</p>
         </div>
-        <div class="area_stations">
-            <div *ngFor="let area of bar.areas" class="area_station">
-                <label class="subtitle">{{area.stationName}} 徒歩{{area.walk_time}}分</label>
+        <div class="under_section">
+            <div class="left_section">
+                <div class="location">
+                    <label><p>{{ _bar.nearStationName }}</p></label>
+                    <label><p>徒歩{{ _bar.onFootTime }}分</p></label>
+                </div>
+                <div class="number_of_tap">
+                    <div class="tap_label">
+                        <label><p>Tap</p></label>
+                    </div>
+                    <div class="tap_value">
+                        <label><p>{{ _bar.numberOfTaps }}</p></label>
+                    </div>
+                </div>
+            </div>
+            <div class="right_section">
+                <div class="address">
+                    <label><p>{{ _bar.address }}</p></label>
+                </div>
+                <div class="phone_number">
+                    <label><p>{{ _bar.phoneNumber }}</p></label>
+                </div>
+                <div class="food">
+                    <label><p>Food : {{ _bar.food }}</p></label>
+                </div>
+                <div class="style">
+                    <label><p>Style : {{ _bar.style }}</p></label>
+                </div>
+                <div class="link_section">
+                    <div class="official_link">
+                        <a [href]="_bar.officialLink"><p>公式サイトリンク</p></a>
+                    </div>
+                    <div class="tabelog_link">
+                        <a [href]="_bar.tabelogLink"><p>食べログリンク</p></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <label class="tap_value">Tap : 31</label><label class="food_value">Food : Mex-Italian</label>
     </div>
  </mat-card>
