@@ -8,6 +8,7 @@ export class Bar {
     tabelogLink!: string;
     food!: string;
     style!: string;
+    listImageUrl!: string;
     nearStationName!: string;
     onFootTime!: number;
 }
