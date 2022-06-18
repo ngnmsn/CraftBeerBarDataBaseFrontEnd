@@ -5,12 +5,18 @@ body {
       "Hiragino Sans",
       Meiryo,
       sans-serif;
-  }
+}
 
-.header_title {
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    text-align: center;
-    font-size: 5vw;
-    font-weight: bold;
+.header_beer {
+  width: 100%;
+  min-height: 615px;
+  background-image: url("../../assets/img/header/header_beer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.header_container {
+    width: 100%;
+    min-height: 615px;
 }

@@ -1,6 +1,5 @@
 .explorer {
-    padding-top: 5vw;
-    padding-bottom: 5VW;
+    margin-top: -200px;
 }
 
 .explorer_form {
@@ -8,8 +7,17 @@
 }
 
 .area_form {
-    width: 80%;
-    height: 40px;
-    max-width: 525px;
-    min-width: 136px;
+    width: 550px;
+    height: 50px;
+    border-radius: 36px;
+    box-shadow: inset 0px 0px 2px 2px;
+    margin: auto;
+    border: 0px;
+    vertical-align: middle;
+}
+
+.submit_button {
+    height: 50px;
+    margin-left: 5px;
+    vertical-align: middle;
 }
