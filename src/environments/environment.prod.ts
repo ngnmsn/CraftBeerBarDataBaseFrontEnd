@@ -1,3 +1,6 @@
+import { LogLevel } from '../app/log-level';
+
 export const environment = {
-  production: true
+  production: true,
+  logLevel: LogLevel.Warning
 };
