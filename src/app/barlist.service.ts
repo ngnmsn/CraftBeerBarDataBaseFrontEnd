@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Bar } from './bar';
 import { ResponseGetBarList } from './response-interface';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class BarlistService {
 
   barlist!: Bar[];
 
-  private url = "http://localhost:80";
+  private url = environment.apiUrl;
 
   constructor(
     private http: HttpClient
