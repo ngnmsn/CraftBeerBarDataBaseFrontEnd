@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Bar } from '../bar';
 import { Logger } from '../logger';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-barcard',
@@ -11,7 +12,7 @@ export class BarcardComponent implements OnInit {
 
   _bar!: Bar;
   listImageUrlBuilded!: string;
-  private url = "http://localhost:80/image/";
+  private url = environment.imageUrl;
 
   @Input() set bar(bar: Bar) {
     this._bar = bar;
@@ -25,7 +26,7 @@ export class BarcardComponent implements OnInit {
   }
 
   buildListImageUrl(listImageUrl: string) {
-    this.listImageUrlBuilded = this.url +listImageUrl
+    this.listImageUrlBuilded = this.url + "/" + listImageUrl
   }
 
 }
