@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import { StationsService } from './stations.service';
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
+    MatTooltipModule,
     HttpClientModule
   ],
   providers: [
