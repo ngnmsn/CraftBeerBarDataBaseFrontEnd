@@ -7,7 +7,7 @@ import { LogLevel } from '../app/log-level';
 export const environment = {
   production: false,
   apiUrl: "http://localhost:80",
-  imageUrl: "http://localhost:80/image",
+  imageUrl: "assets/test/R2/craftbeerbardatabase/image",
   logLevel: LogLevel.Info
 };
 
