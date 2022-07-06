@@ -21,3 +21,25 @@
     margin-left: 5px;
     vertical-align: middle;
 }
+
+@media screen and (max-width: 480px) {
+    .explorer {
+        margin-top: -75px;
+    }
+
+    .area_form {
+        width: 160px;
+        height: 26px;
+        border-radius: 36px;
+        box-shadow: inset 0px 0px 2px 2px;
+        margin: auto;
+        border: 0px;
+        vertical-align: middle;
+    }
+
+    .submit_button {
+        height: 26px;
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+}
