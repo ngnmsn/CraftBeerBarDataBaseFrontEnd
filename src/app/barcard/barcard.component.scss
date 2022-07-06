@@ -22,6 +22,7 @@
 }
 
 .main_section {
+    width: 300px;
     padding-top: 5px;
     padding-left: 25px;
 }
@@ -123,4 +124,146 @@
 
 .link_section div {
     margin-right: 15px;
+}
+
+@media screen and (max-width: 480px) {
+    .barcard {
+        width: 300px;
+        height: 200px;
+        border-radius: 15px;
+        margin: 20px auto;
+        background-color: #F1FA06;
+        border: 1px solid #707070;
+        box-shadow: 0.5px 0.5px 3px 3px #f2fa062f;
+        padding: 0px;
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .list_image {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .list_image_tag {
+        width: 300px;
+        height: 65px;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    }
+    
+    .main_section {
+        width: 290px;
+        height: 129px;
+        padding-top: 0px;
+        padding-left: 10px;
+    }
+    
+    .title {
+        width: 290px;
+        height: 20px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        align-items: center;
+    }
+    
+    .title_p_wrapper {
+        width: 290px;
+        height: 20px;
+    }
+
+    .title p {
+        height: 20px;
+        line-height: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .under_section {
+        width: 290px;
+        height: 109px;
+        display: flex;
+    }
+    
+    .location {
+        display: flex;
+        height: 20;
+        margin-top: 3px;
+        margin-right: 3px;
+    }
+    
+    .location p {
+        font-size: 12px;
+        margin: 0px;
+        font-weight: bold;
+    }
+    
+    .number_of_tap {
+        width: 94px;
+        height: 72px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: inset 3px 3px 3px;
+    }
+    
+    .tap_label {
+        width: 85px;
+        padding-top: 5px;
+        padding-left: 9px;
+    }
+    
+    .tap_label p {
+        font-size: 15px;
+        margin: 0px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    .tap_value {
+        width: 94px;
+        height: 45px;
+        position: relative;
+    }
+    
+    .tap_value p {
+        font-size: 35px;
+        font-weight: bold;
+        font-style: italic;
+        color: #ff0000;
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .right_section {
+        width: 186px;
+        height: 109px;
+        margin-left: 10px;
+    }
+    
+    .right_section div {
+        height: 15px;
+        margin-top: 3px;
+    }
+    
+    .right_section div p {
+        font-size: 10px;
+        margin: 0px;
+        font-weight: bold;
+    }
+    
+    .link_section {
+        display: flex;
+    }
+    
+    .link_section div {
+        margin-right: 15px;
+    }
 }
